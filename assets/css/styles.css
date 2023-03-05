@@ -17,7 +17,7 @@
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
-  --transition: 0.3s;
+  --transition: 0.2s;
 }
 /* Variables end */
 
@@ -55,7 +55,7 @@ nav {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,20 +64,24 @@ nav {
     /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); */
 }
 
-
 /* Improving the navigation bar appearance */
 nav h1 {
     color: var(--primary-color);
     font-family: "Cardo", serif;
     font-weight: 700;
-    /* transform: scale(.75, 1); */
 }
 
 nav a {
     color: var(--primary-color);
     transition: var(--transition);
+    font-size: 20pt;
 }
-nav a:hover {
+
+.nav-title {
+    font-size: 32pt;
+}
+
+.nav-link:hover {
     color: var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
 }
@@ -91,8 +95,6 @@ nav ul {
 nav ul li {
     font-weight: var(--bold-font);
 }
-
-
   
 
 .burger-menu {
@@ -113,13 +115,13 @@ nav ul li {
     margin-right: 30rem;
 } */
 
-.img {
-    display: flex;
-    margin-right: auto;
-    float: left;
-    width:auto; /* you can use % */
-    height: 900px;
-    z-index: -1;
+.me {
+    position: absolute;
+    width: 720px;
+    left: 50%;
+    margin-left: -360px;
+    bottom: 0%;
+    z-index: 0;
 }
 
 .bio {
@@ -139,8 +141,43 @@ nav ul li {
 }
 
 .bio-title {
-    font-size: 32pt;
+    font-size: 64pt;
+    font-family: "Cardo", serif;
     color: var(--primary-color);
+    left: 50%;
+    width: 1000px;
+    top: 18%;
+    margin-left: 50%;
+    margin-left: -500px;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.bio-description {
+    font-size: 20pt;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--primary-color);
+    left: 50%;
+    width: 36%;
+    top: 30%;
+    margin-left: -18%;
+    text-align: justify;
+    text-align-last: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.rectangle {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+    z-index: -1;
+    height:30%;
+    background: var(--secondary-color);
+    /* position: fixed; */
+    margin-top: 1.8%;
 }
 
 .page-title {
@@ -173,19 +210,48 @@ nav ul li {
 
 footer {
     font-family: "Josefin Sans", sans-serif;
+    font-size: 18pt;
     bottom: 0%;
     left: 50%;
     width: 300px;
     margin-left: -150px;
     position: fixed;
-    background-color: var(--nav-color);
-    color: var(--primary-color);
+    /* background-color: var(--nav-color); */
+    color: var(--nav-color);
     padding: 1.25rem;
     text-align: center;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 810px) {
     /*changes reflects on screen with a width of 720px and below*/
+    .bio-title {
+        font-size: 24pt;
+        font-family: "Cardo", serif;
+        color: var(--primary-color);
+        left: 50%;
+        width: 500px;
+        top: 15%;
+        margin-left: 50%;
+        margin-left: -250px;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .bio-description {
+        font-size: 12pt;
+        font-family: "Josefin Sans", sans-serif;
+        color: var(--primary-color);
+        left: 50%;
+        width: 60%;
+        top: 20%;
+        margin-left: -30%;
+        text-align: justify;
+        text-align-last: center;
+        position: fixed;
+        z-index: 1;
+    }
+
     nav {
         padding: 1.5rem 1rem;
     }
@@ -200,6 +266,7 @@ footer {
         text-align: center;
         transform: translateX(120%);
         transition: transform 0.5s ease-in;
+        z-index: 3;
     }
     
     nav ul li {
@@ -213,5 +280,117 @@ footer {
     nav ul.show {
         transform: translateX(0);
     }
-    
+
+    .me {
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        margin-left: -40%;
+        bottom: 0%;
+        z-index: 0;
+    }
+
+    .rectangle {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        margin-left: -50%;
+        bottom: 0%;
+        z-index: -1;
+        height:30%;
+        background: var(--secondary-color);
+        /* position: fixed; */
+        margin-top: 1.8%;
+    }
+
+    footer {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 12pt;
+        bottom: 0%;
+        left: 50%;
+        width: 300px;
+        margin-left: -150px;
+        position: fixed;
+        /* background-color: var(--nav-color); */
+        color: var(--nav-color);
+        padding: 1.25rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .nav-title {
+        font-size: 18pt;
+    }
+
+    nav a {
+        color: var(--primary-color);
+        transition: var(--transition);
+        font-size: 12pt;
+    }
+
+    .bio-title {
+        font-size: 12pt;
+        font-family: "Cardo", serif;
+        color: var(--primary-color);
+        left: 50%;
+        width: 500px;
+        top: 20%;
+        margin-left: 50%;
+        margin-left: -250px;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .bio-description {
+        font-size: 11pt;
+        font-family: "Josefin Sans", sans-serif;
+        color: var(--primary-color);
+        left: 50%;
+        width: 80%;
+        top: 25%;
+        margin-left: -40%;
+        text-align: justify;
+        text-align-last: center;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .me {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        margin-left: -50%;
+        bottom: 0%;
+        z-index: 0;
+    }
+
+    .rectangle {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        margin-left: -50%;
+        bottom: 0%;
+        z-index: -1;
+        height:30%;
+        background: var(--secondary-color);
+        /* position: fixed; */
+        margin-top: 1.8%;
+    }
+
+    footer {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 12pt;
+        bottom: 0%;
+        left: 50%;
+        width: 300px;
+        margin-left: -150px;
+        position: fixed;
+        /* background-color: var(--nav-color); */
+        color: var(--nav-color);
+        padding: 1.25rem;
+        text-align: center;
+    }
 }
