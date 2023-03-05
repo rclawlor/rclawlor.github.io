@@ -117,9 +117,9 @@ nav ul li {
 
 .me {
     position: absolute;
-    width: 720px;
+    width: 650px;
     left: 50%;
-    margin-left: -360px;
+    margin-left: -325px;
     bottom: 0%;
     z-index: 0;
 }
@@ -141,12 +141,12 @@ nav ul li {
 }
 
 .bio-title {
-    font-size: 64pt;
+    font-size: 42pt;
     font-family: "Cardo", serif;
     color: var(--primary-color);
     left: 50%;
     width: 1000px;
-    top: 18%;
+    top: 12%;
     margin-left: 50%;
     margin-left: -500px;
     text-align: center;
@@ -159,9 +159,9 @@ nav ul li {
     font-family: "Josefin Sans", sans-serif;
     color: var(--primary-color);
     left: 50%;
-    width: 36%;
-    top: 30%;
-    margin-left: -18%;
+    width: 46%;
+    top: 22%;
+    margin-left: -23%;
     text-align: justify;
     text-align-last: center;
     position: fixed;
@@ -336,7 +336,7 @@ footer {
         color: var(--primary-color);
         left: 50%;
         width: 500px;
-        top: 20%;
+        top: 14%;
         margin-left: 50%;
         margin-left: -250px;
         text-align: center;
@@ -350,7 +350,7 @@ footer {
         color: var(--primary-color);
         left: 50%;
         width: 80%;
-        top: 25%;
+        top: 18%;
         margin-left: -40%;
         text-align: justify;
         text-align-last: center;
