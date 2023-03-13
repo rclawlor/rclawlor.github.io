@@ -1,17 +1,17 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap"); */
 /* @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Josefin+Sans:wght@300&family=Red+Hat+Display:wght@900&display=swap');
 
 /* Variables */
 :root {
-  --font-family: "Cardo", serif;
+  --font-family: "Red Hat Display", sans-serif;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 800;
   --bg-color: #1c1c1c;
-  --nav-color: #FCF9EE;
+  --nav-color: #fff5d3;
   --primary-color: #0D0D0D;
-  --secondary-color: #FFB347;
+  --secondary-color: #f5ac46;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
@@ -22,8 +22,10 @@
 /* Variables end */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    height: 100%;
 }
+
 
 /* CSS Resets */
 * {
@@ -49,6 +51,8 @@ a:hover {
 body {
     /* font-family: var(--font-family); */
     background-color: var(--nav-color);
+    height: 100%;
+    /* background: radial-gradient(circle at 50% 0%, rgba(252,249,238,1) 50%, var(--secondary-color) 20%); */
 }
 
 nav {
@@ -67,8 +71,7 @@ nav {
 /* Improving the navigation bar appearance */
 nav h1 {
     color: var(--primary-color);
-    font-family: "Cardo", serif;
-    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 nav a {
@@ -78,7 +81,7 @@ nav a {
 }
 
 .nav-title {
-    font-size: 32pt;
+    font-size: 20pt;
 }
 
 .nav-link:hover {
@@ -117,11 +120,12 @@ nav ul li {
 
 .me {
     position: absolute;
-    width: 650px;
-    left: 50%;
-    margin-left: -325px;
+    width: 80%;
+    left: 0%;
+    /* margin-left: -325px; */
     bottom: 0%;
     z-index: 0;
+    filter: saturate(0%);
 }
 
 .bio {
@@ -141,15 +145,13 @@ nav ul li {
 }
 
 .bio-title {
-    font-size: 42pt;
-    font-family: "Cardo", serif;
+    font-size: 5em;
+    font-family: "Red Hat Display", sans-serif;
     color: var(--primary-color);
-    left: 50%;
+    left: 45%;
     width: 1000px;
-    top: 15%;
-    margin-left: 50%;
-    margin-left: -500px;
-    text-align: center;
+    top: 25%;
+    text-align: left;
     position: fixed;
     z-index: 1;
 }
@@ -158,12 +160,11 @@ nav ul li {
     font-size: 20pt;
     font-family: "Josefin Sans", sans-serif;
     color: var(--primary-color);
-    left: 50%;
+    left: 45%;
     width: 46%;
-    top: 25%;
-    margin-left: -23%;
-    text-align: justify;
-    text-align-last: center;
+    top: 37%;
+    text-align: left;
+    /* text-align-last: center; */
     position: fixed;
     z-index: 1;
 }
@@ -174,24 +175,72 @@ nav ul li {
     left: 0%;
     bottom: 0%;
     z-index: -1;
-    height:30%;
+    height:10%;
     background: var(--secondary-color);
     /* position: fixed; */
     margin-top: 1.8%;
 }
 
+.rectangle-page {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+    z-index: -1;
+    height:10%;
+    background: var(--secondary-color);
+    /* position: fixed; */
+    margin-top: 1.8%;
+}
+
+.circle {
+    --circle-radius: 40vw;
+    position: absolute;
+    width: var(--circle-radius);
+    height: var(--circle-radius);
+    min-width: var(--circle-radius);
+    min-height: var(--circle-radius);
+    left: 17%;
+    bottom: 40vh;
+    margin-left: calc(-1 * var(--circle-radius)/2);
+    margin-bottom: calc(-1 * var(--circle-radius)/2);
+    z-index: -1;
+    background: var(--secondary-color);
+    background: linear-gradient(1turn, rgb(255, 79, 4) 0%, var(--secondary-color) 80%);
+    border-radius: 50%;
+}
+
+.circle-title {
+    position: absolute;
+    --circle-title-radius: 7rem;
+    width: var(--circle-title-radius);
+    height: var(--circle-title-radius);
+    min-width: var(--circle-title-radius);
+    min-height: var(--circle-title-radius);
+    left: -1rem;
+    top: 0rem;
+    margin-left: calc(-1 * var(--circle-title-radius) / 2);
+    margin-bottom: calc(-1 * var(--circle-title-radius) / 2);
+    z-index: -1;
+    background: var(--secondary-color);
+    background: linear-gradient(1turn, rgb(255, 79, 4) 0%, var(--secondary-color) 80%);
+    /* position: fixed; */
+    border-radius: 50%;
+}
+
 .page-title {
-    font-family: "Cardo", serif;
-    font-size: 40pt;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 64pt;
     left: 50%;
     width: 300px;
     margin-left: -150px;
-    position: fixed;
+    position: relative;
     text-align: center;
+    color: var(--bg-color);
 }
 
 .projects {
-    font-family: "Cardo", serif;
+    font-family: "Red Hat Display", sans-serif;
     margin-top: 5%;
     text-align: center;
 }
@@ -210,16 +259,67 @@ nav ul li {
 
 footer {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 18pt;
+    font-size: 14pt;
     bottom: 0%;
     left: 50%;
     width: 300px;
     margin-left: -150px;
     position: fixed;
     /* background-color: var(--nav-color); */
-    color: var(--nav-color);
+    color: var(--bg-color);
     padding: 1.25rem;
     text-align: center;
+}
+
+/* PROJECTS */
+.image-grid {
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-gap: 20px; */
+    /* margin-top: 50px; */
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
+}
+
+.image-item {
+    display: inline-block;
+    flex-direction: column;
+    /* border: 1px solid #000; */
+    /* box-shadow: 0 3px 5px var(--bg-color); */
+    transition: 0.5s;
+    align-items: center;
+    padding: 0px;
+    width: 30em;
+    
+    /* margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem; */
+
+    /* background-color: var(--bg-color); */
+}
+
+.image-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18pt;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--nav-color);
+}
+
+img {
+    /* max-width: 100%; */
+    transition: 0.5s;
+}
+
+img:hover {
+
 }
 
 @media screen and (max-width: 810px) {
@@ -244,11 +344,11 @@ footer {
         color: var(--primary-color);
         left: 50%;
         width: 60%;
-        top: 20%;
+        top: 22%;
         margin-left: -30%;
         text-align: justify;
         text-align-last: center;
-        position: fixed;
+        /* position: fixed; */
         z-index: 1;
     }
 
@@ -316,6 +416,7 @@ footer {
         padding: 1.25rem;
         text-align: center;
     }
+
 }
 
 @media screen and (max-width: 480px) {
