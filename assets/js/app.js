@@ -1,20 +1,18 @@
-// Nav hamburgerburger selections
+var menuItems = document.querySelectorAll('.vertical-menu a');
 
-const burger = document.querySelector("#burger-menu");
-const ul = document.querySelector("nav ul");
-const nav = document.querySelector("nav");
+menuItems.forEach(function(item) {
+    // Compare the current page URL with the menu item's URL
+    if (item.href === window.location.href) {
+        item.classList.add('active');
+    }
 
-burger.addEventListener("click", () => {
-        ul.classList.toggle("show");
+    item.addEventListener('click', function() {
+        // Remove active class from all menu items
+        menuItems.forEach(function(item) {
+            item.classList.remove('active');
+        });
+
+        // Add active class to the clicked menu item
+        this.classList.add('active');
     });
-
-// Close hamburger menu when a link is clicked
-
-// Select nav links
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach((link) =>
-    link.addEventListener("click", () => {
-        ul.classList.remove("show");
-    })
-);
+});
